@@ -1,9 +1,12 @@
 package com.doxda.detection.authenticity.impl;
 
 import com.doxda.detection.authenticity.AuthenticityHandle;
+import com.doxda.detection.metadate.Metadata;
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.util.Arrays;
 
 /**
@@ -17,6 +20,7 @@ public class AuthenticityHandler implements AuthenticityHandle {
      * 来源真实性检测 检测项目为固化信息有效性检测
      * @return 是否通过
      */
+    @Override
     public boolean sourceAuthenticity(String filename) {
         FileInputStream in =null;
         try{
@@ -55,9 +59,35 @@ public class AuthenticityHandler implements AuthenticityHandle {
      * 元数据项数据包含特殊字符检测、档号规范性检测、元数据项数据重复性检测
      * @return 是否通过
      */
-    public boolean metadataAuthenticity() {
+    @Override
+    public boolean metadataAuthenticity(Metadata metadata) {
+        try{
+            Field[] metadataFields = metadata.getClass().getDeclaredFields();
+            for (Field metadataField : metadataFields) {
+                metadataField.setAccessible(true);
+                if (metadataField.getType()==String.class){
+                    String s = (String)metadataField.get(metadata);
+                    if (StringUtils.isBlank(s)){
+                        return false;
+                    }
+                }
+                else {
+                    Class clazz=metadataField.getType();
+                    Field [] fields = clazz.getDeclaredFields();
+                    for (Field field : fields) {
+                        "".equals(field.getName()){
 
-        return false;
+                        }
+                    }
+                }
+
+            }
+            return true;
+        }
+        catch (Exception e){
+            return false;
+        }
+
     }
 
     /**
@@ -65,6 +95,7 @@ public class AuthenticityHandler implements AuthenticityHandle {
      *
      * @return 是否通过
      */
+    @Override
     public boolean electronicDocumentAuthenticity() {
         return false;
     }
@@ -74,6 +105,7 @@ public class AuthenticityHandler implements AuthenticityHandle {
      *
      * @return 是否通过
      */
+    @Override
     public boolean metadataRelevanceDocumentAuthenticity() {
         return false;
     }
@@ -83,6 +115,7 @@ public class AuthenticityHandler implements AuthenticityHandle {
      *
      * @return 是否通过
      */
+    @Override
     public boolean archivePacketAuthenticity() {
         return false;
     }
