@@ -75,7 +75,7 @@ public class AuthenticityHandler implements AuthenticityHandle {
                     Class clazz=metadataField.getType();
                     Field [] fields = clazz.getDeclaredFields();
                     for (Field field : fields) {
-                        "".equals(field.getName()){
+                        if("".equals(field.getName())){
 
                         }
                     }
