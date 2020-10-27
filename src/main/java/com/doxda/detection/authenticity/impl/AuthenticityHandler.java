@@ -1,10 +1,14 @@
 package com.doxda.detection.authenticity.impl;
 
+import cn.hutool.core.convert.Convert;
 import com.doxda.detection.authenticity.AuthenticityHandle;
+import com.doxda.detection.metadate.Metadata;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.util.Arrays;
+import java.util.Date;
 
 /**
  * 来源真实性检测 元数据真实性检测 电子文件真实 元数据与内容关联真实性检测 归档信息包真实性检测
@@ -45,7 +49,8 @@ public class AuthenticityHandler implements AuthenticityHandle {
 
     public static void main(String[] args) {
         AuthenticityHandler a= new AuthenticityHandler();
-        a.sourceAuthenticity("C:\\Users\\admin\\Desktop\\(样本)人事档案目录.pdf");
+        Metadata metadata = new Metadata();
+        a.metadataAuthenticity(metadata);
     }
 
     /**
@@ -55,14 +60,24 @@ public class AuthenticityHandler implements AuthenticityHandle {
      * 元数据项数据包含特殊字符检测、档号规范性检测、元数据项数据重复性检测
      * @return 是否通过
      */
-    public boolean metadataAuthenticity() {
+    public boolean metadataAuthenticity(Metadata metadata) {
+        Field[] fields=metadata.getClass().getDeclaredFields();
+        for (Field field : fields) {
+            field.setAccessible(true);
+            Class c = field.getType();
+            Field[] fields1 = c.getDeclaredFields();
+            for (Field field1 : fields1) {
 
+            }
+            System.out.println(c);
+        }
+        String aggregationLevel = metadata.getAggregationLevel();
+        //校验值域
         return false;
     }
 
     /**
-     * 电子文件真实
-     *
+     * 电子文件真实性
      * @return 是否通过
      */
     public boolean electronicDocumentAuthenticity() {

@@ -88,4 +88,92 @@ public class Metadata {
      * 电子文件和元数据中需要解释和补充说明的事项
      */
     private String annotation;
+
+    public String getAggregationLevel() {
+        return aggregationLevel;
+    }
+
+    public void setAggregationLevel(String aggregationLevel) {
+        this.aggregationLevel = aggregationLevel;
+    }
+
+    public Source getSource() {
+        return source;
+    }
+
+    public void setSource(Source source) {
+        this.source = source;
+    }
+
+    public ElectronicRecordCode getElectronicRecordCode() {
+        return electronicRecordCode;
+    }
+
+    public void setElectronicRecordCode(ElectronicRecordCode electronicRecordCode) {
+        this.electronicRecordCode = electronicRecordCode;
+    }
+
+    public ContentDescription getContentDescription() {
+        return contentDescription;
+    }
+
+    public void setContentDescription(ContentDescription contentDescription) {
+        this.contentDescription = contentDescription;
+    }
+
+    public FormalCharacteristics getFormalCharacteristics() {
+        return formalCharacteristics;
+    }
+
+    public void setFormalCharacteristics(FormalCharacteristics formalCharacteristics) {
+        this.formalCharacteristics = formalCharacteristics;
+    }
+
+    public ElectronicAttributes getElectronicAttributes() {
+        return electronicAttributes;
+    }
+
+    public void setElectronicAttributes(ElectronicAttributes electronicAttributes) {
+        this.electronicAttributes = electronicAttributes;
+    }
+
+    public DigitizationAttributes getDigitizationAttributes() {
+        return digitizationAttributes;
+    }
+
+    public void setDigitizationAttributes(DigitizationAttributes digitizationAttributes) {
+        this.digitizationAttributes = digitizationAttributes;
+    }
+
+    public ElectronicSignature getElectronicSignature() {
+        return electronicSignature;
+    }
+
+    public void setElectronicSignature(ElectronicSignature electronicSignature) {
+        this.electronicSignature = electronicSignature;
+    }
+
+    public StorageLocation getStorageLocation() {
+        return storageLocation;
+    }
+
+    public void setStorageLocation(StorageLocation storageLocation) {
+        this.storageLocation = storageLocation;
+    }
+
+    public RightsManagement getRightsManagement() {
+        return rightsManagement;
+    }
+
+    public void setRightsManagement(RightsManagement rightsManagement) {
+        this.rightsManagement = rightsManagement;
+    }
+
+    public String getAnnotation() {
+        return annotation;
+    }
+
+    public void setAnnotation(String annotation) {
+        this.annotation = annotation;
+    }
 }

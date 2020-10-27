@@ -1,5 +1,7 @@
 package com.doxda.detection.authenticity;
 
+import com.doxda.detection.metadate.Metadata;
+
 /**
  * 来源真实性检测 元数据真实性检测 电子文件真实 元数据与内容关联真实性检测 归档信息包真实性检测
  * @author zgq
@@ -15,9 +17,10 @@ public interface AuthenticityHandle {
 
     /**
      * 元数据真实性检测
+     * @param metadata 元数据
      * @return 是否通过
      */
-    boolean metadataAuthenticity();
+    boolean metadataAuthenticity(Metadata metadata);
     /**
      * 电子文件真实
      * @return 是否通过
