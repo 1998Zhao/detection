@@ -21,6 +21,7 @@ public interface AuthenticityHandle {
      * @return 是否通过
      */
     boolean metadataAuthenticity(Metadata metadata);
+
     /**
      * 电子文件真实
      * @return 是否通过
