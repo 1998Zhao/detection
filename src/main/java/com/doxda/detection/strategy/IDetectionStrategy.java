@@ -10,11 +10,10 @@ import java.util.Map;
  * 校验策略
  * @author zgq
  */
-public interface DetectionStrategy {
+public interface IDetectionStrategy {
     /**
      * 对元数据进行校验
-     * @param iMetadata 元数据子元素
      * @return 校验结果
      */
-    Result detection(IMetadata iMetadata);
+    Result detection();
 }

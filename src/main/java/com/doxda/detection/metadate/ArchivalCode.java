@@ -6,6 +6,10 @@ package com.doxda.detection.metadate;
  */
 public class ArchivalCode {
     /**
+     * 档号
+     */
+    private String archivalCode;
+    /**
      * 全宗号
      */
     private String fondsIdentifier;
@@ -62,6 +66,13 @@ public class ArchivalCode {
      */
     private String pageNumber;
 
+    public String getArchivalCode() {
+        return archivalCode;
+    }
+
+    public void setArchivalCode(String archivalCode) {
+        this.archivalCode = archivalCode;
+    }
 
     public String getFondsIdentifier() {
         return fondsIdentifier;

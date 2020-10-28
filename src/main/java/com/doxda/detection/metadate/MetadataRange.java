@@ -8,19 +8,19 @@ import java.util.Map;
  * @author zgq
  */
 public class MetadataRange {
-    static Map<String,String[]> aggregationLevelMap = new HashMap<String, String[]>();
-    static String[] aggregationLevels ={"文件","案卷"};
-    static Map<String,String[]> sourceMap =new HashMap<String, String[]>();
-    static Map<String,String[]> electronicRecordCodeMap = new HashMap<String, String[]>();
-    static Map<String,String[]> contentDescriptionMap =new HashMap<String, String[]>();
-    static Map<String,String[]> formalCharacteristicsMap = new HashMap<String, String[]>();
-    static Map<String,String[]> electronicAttributesMap =new HashMap<String, String[]>();
-    static Map<String,String[]> digitizationAttributesMap = new HashMap<String, String[]>();
-    static Map<String,String[]> electronicSignatureMap =new HashMap<String, String[]>();
-    static Map<String,String[]> storageLocationMap = new HashMap<String, String[]>();
-    static Map<String,String[]> rightsManagementMap = new HashMap<String, String[]>();
-    static Map<String,String[]> annotationMap = new HashMap<String, String[]>();
-    static String[] annotation ={"文件","案卷"};
+    public static Map<String,String[]> aggregationLevelMap = new HashMap<String, String[]>();
+    public static String[] aggregationLevels ={"文件","案卷"};
+    public static Map<String,String[]> sourceMap =new HashMap<String, String[]>();
+    public static Map<String,String[]> electronicRecordCodeMap = new HashMap<String, String[]>();
+    public static Map<String,String[]> contentDescriptionMap =new HashMap<String, String[]>();
+    public static Map<String,String[]> formalCharacteristicsMap = new HashMap<String, String[]>();
+    public static Map<String,String[]> electronicAttributesMap =new HashMap<String, String[]>();
+    public static Map<String,String[]> digitizationAttributesMap = new HashMap<String, String[]>();
+    public static Map<String,String[]> electronicSignatureMap =new HashMap<String, String[]>();
+    public static Map<String,String[]> storageLocationMap = new HashMap<String, String[]>();
+    public static Map<String,String[]> rightsManagementMap = new HashMap<String, String[]>();
+    public static Map<String,String[]> annotationMap = new HashMap<String, String[]>();
+    public static String[] annotation ={"文件","案卷"};
     static {
         annotationMap.put("annotation",annotation);
         aggregationLevelMap.put("aggregationLevel",aggregationLevels);
