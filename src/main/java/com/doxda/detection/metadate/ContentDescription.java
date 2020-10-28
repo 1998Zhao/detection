@@ -4,7 +4,7 @@ package com.doxda.detection.metadate;
  *  内容描述
  * @author zgq
  */
-public class ContentDescription {
+public class ContentDescription implements IMetadata{
     /**
      * 题名 又称标题、题目，是表达电子文件中心内容和形式特征的名称
      */

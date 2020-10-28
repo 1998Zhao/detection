@@ -8,7 +8,7 @@ import java.util.Date;
  * 子元素	签名规则（M58）签名时间（M59）签名人（M60）签名结果（M61）证书（M62）证书引证（M63）签名算法标识（M64）
  * @author zgq
  */
-public class ElectronicSignature {
+public class ElectronicSignature implements IMetadata{
     /**
      * 签名规则
      * 对电子文件的电子签名方法、手段等相关信息的描述

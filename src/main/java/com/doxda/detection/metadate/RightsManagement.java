@@ -4,7 +4,7 @@ package com.doxda.detection.metadate;
  *
  * @author zgq
  */
-public class RightsManagement {
+public class RightsManagement implements IMetadata{
     /**
      * 知识产权说明
      * 电子文件所涉及或具有的有关知识产权的描述

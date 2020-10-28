@@ -11,7 +11,7 @@ package com.doxda.detection.metadate;
  * 稿本（M45）
  * @author zgq
  */
-public class FormalCharacteristics {
+public class FormalCharacteristics implements IMetadata{
     /**
      * 文件组合类型
      * 文件级聚合层次上文档聚合状况的分类

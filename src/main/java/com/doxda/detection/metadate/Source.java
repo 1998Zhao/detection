@@ -7,7 +7,7 @@ package com.doxda.detection.metadate;
  * 立档单位名称（M6）
  * @author zgq
  */
-public class Source {
+public class Source implements IMetadata{
     private String archivesName;
     private String archivesIdentifier;
     private String fondsName;

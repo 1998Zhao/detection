@@ -9,7 +9,7 @@ public class Metadata {
      * 聚合层次
      * 电子文件在分类、整理、著录、保管和提供利用时，作为个体和特定群体的控制层次。如宗、目、卷、件等
      */
-    private String aggregationLevel;
+    private AggregationLevel aggregationLevel;
     /**
      * * 来源
      * 档案馆名称（M3）
@@ -25,6 +25,10 @@ public class Metadata {
      * 为电子文件（包括文件和案卷）提供惟一标识；在电子文件之间、电子文件与其传统载体档案之间提供关联标识
      */
     private ElectronicRecordCode electronicRecordCode;
+    /**
+     * 档号
+     */
+    private ArchivalCode archivalCode;
     /**
      * * 内容描述
      * 题名（M22）
@@ -87,15 +91,8 @@ public class Metadata {
      * 附注
      * 电子文件和元数据中需要解释和补充说明的事项
      */
-    private String annotation;
+    private Annotation annotation;
 
-    public String getAggregationLevel() {
-        return aggregationLevel;
-    }
-
-    public void setAggregationLevel(String aggregationLevel) {
-        this.aggregationLevel = aggregationLevel;
-    }
 
     public Source getSource() {
         return source;
@@ -105,12 +102,13 @@ public class Metadata {
         this.source = source;
     }
 
-    public ElectronicRecordCode getElectronicRecordCode() {
-        return electronicRecordCode;
+
+    public ArchivalCode getArchivalCode() {
+        return archivalCode;
     }
 
-    public void setElectronicRecordCode(ElectronicRecordCode electronicRecordCode) {
-        this.electronicRecordCode = electronicRecordCode;
+    public void setArchivalCode(ArchivalCode archivalCode) {
+        this.archivalCode = archivalCode;
     }
 
     public ContentDescription getContentDescription() {
@@ -169,11 +167,27 @@ public class Metadata {
         this.rightsManagement = rightsManagement;
     }
 
-    public String getAnnotation() {
+    public AggregationLevel getAggregationLevel() {
+        return aggregationLevel;
+    }
+
+    public void setAggregationLevel(AggregationLevel aggregationLevel) {
+        this.aggregationLevel = aggregationLevel;
+    }
+
+    public ElectronicRecordCode getElectronicRecordCode() {
+        return electronicRecordCode;
+    }
+
+    public void setElectronicRecordCode(ElectronicRecordCode electronicRecordCode) {
+        this.electronicRecordCode = electronicRecordCode;
+    }
+
+    public Annotation getAnnotation() {
         return annotation;
     }
 
-    public void setAnnotation(String annotation) {
+    public void setAnnotation(Annotation annotation) {
         this.annotation = annotation;
     }
 }

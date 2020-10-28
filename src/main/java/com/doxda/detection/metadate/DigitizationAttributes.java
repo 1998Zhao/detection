@@ -6,7 +6,7 @@ package com.doxda.detection.metadate;
  * 子元素 数字化对象形态（M53）扫描分辨率（M54）扫描色彩模式（M55）图像压缩方案（M56）
  * @author zgq
  */
-public class DigitizationAttributes {
+public class DigitizationAttributes implements IMetadata{
     /**
      * 数字化对象形态
      * 被数字化文件或档案的载体类型、物理尺寸等信息的描述

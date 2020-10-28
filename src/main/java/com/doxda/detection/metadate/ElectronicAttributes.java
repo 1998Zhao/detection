@@ -6,7 +6,7 @@ package com.doxda.detection.metadate;
  * 子元素 格式信息（M47）计算机文件名（M48）计算机文件大小（M49）文档创建程序（M50）信息系统描述（M51）
  * @author zgq
  */
-public class ElectronicAttributes {
+public class ElectronicAttributes implements IMetadata{
     /**
      * 格式信息
      * 电子文件格式的一组描述信息

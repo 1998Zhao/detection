@@ -4,7 +4,7 @@ package com.doxda.detection.metadate;
  * 对电子文件物理和逻辑存址的一组描述信息
  * @author zgq
  */
-public class StorageLocation {
+public class StorageLocation implements IMetadata{
     /**
      * 当前位置
      * 电子文件在文档管理系统中存储位置
