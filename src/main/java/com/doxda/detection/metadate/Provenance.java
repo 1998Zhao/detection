@@ -1,25 +1,26 @@
 package com.doxda.detection.metadate;
 
 /**
+ * 来源
  * 档案馆名称（M3）
  * 档案馆代码（M4）
  * 全宗名称（M5）
  * 立档单位名称（M6）
  * @author zgq
  */
-public class Source implements IMetadata{
-    private String source;
+public class Provenance implements IMetadata{
+    private String provenance;
     private String archivesName;
     private String archivesIdentifier;
     private String fondsName;
     private String fondsConstitutingUnitName;
 
-    public String getSource() {
-        return source;
+    public String getProvenance() {
+        return provenance;
     }
 
-    public void setSource(String source) {
-        this.source = source;
+    public void setProvenance(String provenance) {
+        this.provenance = provenance;
     }
 
     public String getArchivesName() {

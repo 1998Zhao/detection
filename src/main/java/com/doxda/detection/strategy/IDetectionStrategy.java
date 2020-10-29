@@ -1,12 +1,13 @@
 package com.doxda.detection.strategy;
 
+import cn.hutool.core.util.ArrayUtil;
 import com.doxda.detection.metadate.IMetadata;
 import com.doxda.detection.metadate.Metadata;
 import com.doxda.detection.result.Result;
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.lang.reflect.Field;
+import java.util.*;
 
 /**
  * 校验策略
@@ -38,5 +39,29 @@ public interface IDetectionStrategy {
             check = true;
         }
         return new Result(check,map);
+    }
+
+    /**
+     * according to Imetadate get their fields value
+     * @param metadata
+     * @param array
+     * @return fields value
+     */
+    default String []getFieldsByFieldName(IMetadata metadata,String []array){
+        Class c = metadata.getClass();
+        Field[] fields = c.getDeclaredFields();
+        List<String> values = new ArrayList<>();
+        Arrays.stream(fields).forEach(field -> {
+            field.setAccessible(true);
+            if (ArrayUtil.contains(array,field.getName())){
+                try {
+                    values.add((String) field.get(metadata));
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        String[] res = new String[values.size()];
+        return values.toArray(res);
     }
 }

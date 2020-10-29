@@ -37,6 +37,15 @@ public class ElectronicAttributes implements IMetadata{
      */
     private String informationSystemDescription;
 
+    public ElectronicAttributes(String electronicAttributes, String formatInformation, String computerFileName, String computerFileSize, String documentCreatingApplication, String informationSystemDescription) {
+        this.electronicAttributes = electronicAttributes;
+        this.formatInformation = formatInformation;
+        this.computerFileName = computerFileName;
+        this.computerFileSize = computerFileSize;
+        this.documentCreatingApplication = documentCreatingApplication;
+        this.informationSystemDescription = informationSystemDescription;
+    }
+
     public String getElectronicAttributes() {
         return electronicAttributes;
     }

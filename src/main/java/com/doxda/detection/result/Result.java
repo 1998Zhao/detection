@@ -1,5 +1,6 @@
 package com.doxda.detection.result;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -13,6 +14,11 @@ public class Result {
     public Result(boolean check, Map<String, String> msgMap) {
         this.check = check;
         this.msgMap = msgMap;
+    }
+
+    public Result(boolean check) {
+        this.check = check;
+        this.msgMap=new HashMap<>();
     }
 
     public Result() {

@@ -19,7 +19,7 @@ public class Metadata {
      * 提供电子文件的背景信息，利于对电子文件的理解、管理和利用
 
      */
-    private Source source;
+    private Provenance provenance;
     /**
      * * 电子文件号
      * 为电子文件（包括文件和案卷）提供惟一标识；在电子文件之间、电子文件与其传统载体档案之间提供关联标识
@@ -93,15 +93,13 @@ public class Metadata {
      */
     private Annotation annotation;
 
-
-    public Source getSource() {
-        return source;
+    public Provenance getProvenance() {
+        return provenance;
     }
 
-    public void setSource(Source source) {
-        this.source = source;
+    public void setProvenance(Provenance provenance) {
+        this.provenance = provenance;
     }
-
 
     public ArchivalCode getArchivalCode() {
         return archivalCode;
