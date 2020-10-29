@@ -9,6 +9,7 @@ import java.util.Date;
  * @author zgq
  */
 public class ElectronicSignature implements IMetadata{
+    p
     /**
      * 签名规则
      * 对电子文件的电子签名方法、手段等相关信息的描述

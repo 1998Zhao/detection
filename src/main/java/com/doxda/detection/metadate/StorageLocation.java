@@ -5,6 +5,7 @@ package com.doxda.detection.metadate;
  * @author zgq
  */
 public class StorageLocation implements IMetadata{
+    private String storageLocation;
     /**
      * 当前位置
      * 电子文件在文档管理系统中存储位置
@@ -25,6 +26,14 @@ public class StorageLocation implements IMetadata{
      * 与电子文件对应的缩微胶片的编号
      */
     private String microformIdentifier;
+
+    public String getStorageLocation() {
+        return storageLocation;
+    }
+
+    public void setStorageLocation(String storageLocation) {
+        this.storageLocation = storageLocation;
+    }
 
     public String getCurrentLocation() {
         return currentLocation;

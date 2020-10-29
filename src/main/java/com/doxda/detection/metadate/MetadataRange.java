@@ -11,7 +11,7 @@ public class MetadataRange {
     public static Map<String,String[]> aggregationLevelMap = new HashMap<String, String[]>();
     public static String[] aggregationLevels ={"文件","案卷"};
     public static Map<String,String[]> sourceMap =new HashMap<String, String[]>();
-    public static Map<String,String[]> electronicRecordCodeMap = new HashMap<String, String[]>();
+    public static Map<String,String[]> archivalCodeMap = new HashMap<String, String[]>();
     public static Map<String,String[]> contentDescriptionMap =new HashMap<String, String[]>();
     public static Map<String,String[]> formalCharacteristicsMap = new HashMap<String, String[]>();
     public static Map<String,String[]> electronicAttributesMap =new HashMap<String, String[]>();
@@ -24,7 +24,7 @@ public class MetadataRange {
     static {
         annotationMap.put("annotation",annotation);
         aggregationLevelMap.put("aggregationLevel",aggregationLevels);
-        sourceMap.put("retentionPeriod",new String[]{"永久", "长期", "短期" ,"30年" ,"10年","[其他]"});
+        archivalCodeMap.put("retentionPeriod",new String[]{"永久", "长期", "短期" ,"30年" ,"10年","[其他]"});
         contentDescriptionMap.put("documentType",new String[]{"命令（令）", "决定", "公告", "通告" ,"通知" ,"通报" ,"议案", "报告", "请示",
                 "批复", "意见", "函", "会议纪要", "指示", "决议", "公报条例", "规定","[其他]"});
         contentDescriptionMap.put("precedence",new String[]{"特提", "特急", "加急", "平急", "急件","[其他]"});

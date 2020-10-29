@@ -8,10 +8,19 @@ package com.doxda.detection.metadate;
  * @author zgq
  */
 public class Source implements IMetadata{
+    private String source;
     private String archivesName;
     private String archivesIdentifier;
     private String fondsName;
     private String fondsConstitutingUnitName;
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
+    }
 
     public String getArchivesName() {
         return archivesName;

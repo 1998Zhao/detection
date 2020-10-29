@@ -6,6 +6,10 @@ package com.doxda.detection.metadate;
  */
 public class ContentDescription implements IMetadata{
     /**
+     * 内容描述
+     */
+    private String contentDescription;
+    /**
      * 题名 又称标题、题目，是表达电子文件中心内容和形式特征的名称
      */
     private String title;
@@ -93,6 +97,14 @@ public class ContentDescription implements IMetadata{
      * 对电子文件密级时效的规定和说明
      */
     private String secrecyPeriod;
+
+    public String getContentDescription() {
+        return contentDescription;
+    }
+
+    public void setContentDescription(String contentDescription) {
+        this.contentDescription = contentDescription;
+    }
 
     public String getTitle() {
         return title;

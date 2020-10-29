@@ -7,6 +7,7 @@ package com.doxda.detection.metadate;
  * @author zgq
  */
 public class ElectronicAttributes implements IMetadata{
+    private String electronicAttributes;
     /**
      * 格式信息
      * 电子文件格式的一组描述信息
@@ -35,6 +36,14 @@ public class ElectronicAttributes implements IMetadata{
      * 生成或管理电子文件的信息系统的描述信息
      */
     private String informationSystemDescription;
+
+    public String getElectronicAttributes() {
+        return electronicAttributes;
+    }
+
+    public void setElectronicAttributes(String electronicAttributes) {
+        this.electronicAttributes = electronicAttributes;
+    }
 
     public String getFormatInformation() {
         return formatInformation;

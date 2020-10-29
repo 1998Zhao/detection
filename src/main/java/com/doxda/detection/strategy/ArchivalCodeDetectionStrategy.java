@@ -1,8 +1,9 @@
 package com.doxda.detection.strategy;
 
+import cn.hutool.core.util.ArrayUtil;
 import com.doxda.detection.metadate.AggregationLevel;
 import com.doxda.detection.metadate.ArchivalCode;
-import com.doxda.detection.metadate.IMetadata;
+import com.doxda.detection.metadate.MetadataRange;
 import com.doxda.detection.result.Result;
 import org.apache.commons.lang3.StringUtils;
 
@@ -16,12 +17,9 @@ public class ArchivalCodeDetectionStrategy implements IDetectionStrategy{
     private ArchivalCode archivalCode;
     private AggregationLevel aggregationLevel;
 
-    public ArchivalCode getArchivalCode() {
-        return archivalCode;
-    }
-
-    public void setArchivalCode(ArchivalCode archivalCode) {
+    public ArchivalCodeDetectionStrategy(ArchivalCode archivalCode, AggregationLevel aggregationLevel) {
         this.archivalCode = archivalCode;
+        this.aggregationLevel = aggregationLevel;
     }
 
     /**
@@ -44,8 +42,19 @@ public class ArchivalCodeDetectionStrategy implements IDetectionStrategy{
                 j++;
             }
             else {
-                map.put(s,s+"值不能为空");
+                map.put(s,s+"'s value can't be null");
             }
+        }
+        String[] retentionPeriodRange = MetadataRange.archivalCodeMap.get("retentionPeriod");
+        if (!ArrayUtil.contains(retentionPeriodRange,retentionPeriod)){
+            map.put("retentionPeriod","retentionPeriod not in regulation range");
+        }
+        try{
+            int a = Integer.parseInt(year);
+        }
+        catch (Exception e){
+            map.put("year","year's type must be number");
+            return new Result(false,map);
         }
         if (j==array.length){
             check = true;

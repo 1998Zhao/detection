@@ -12,6 +12,7 @@ package com.doxda.detection.metadate;
  * @author zgq
  */
 public class FormalCharacteristics implements IMetadata{
+    private String formalCharacteristics;
     /**
      * 文件组合类型
      * 文件级聚合层次上文档聚合状况的分类
@@ -38,6 +39,14 @@ public class FormalCharacteristics implements IMetadata{
      * 值域 ：草稿 定稿 正本 副本 试行本 修订本 [其他]
      */
     private String manuscriptType;
+
+    public String getFormalCharacteristics() {
+        return formalCharacteristics;
+    }
+
+    public void setFormalCharacteristics(String formalCharacteristics) {
+        this.formalCharacteristics = formalCharacteristics;
+    }
 
     public String getDocumentAggregationType() {
         return documentAggregationType;
