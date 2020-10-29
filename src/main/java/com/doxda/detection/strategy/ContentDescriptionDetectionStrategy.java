@@ -1,9 +1,11 @@
 package com.doxda.detection.strategy;
 
+import cn.hutool.core.convert.Convert;
 import cn.hutool.core.util.StrUtil;
 import com.doxda.detection.metadate.ContentDescription;
 import com.doxda.detection.result.Result;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,6 +33,15 @@ public class ContentDescriptionDetectionStrategy implements IDetectionStrategy{
                 j++;
             }
         }
+        String date = contentDescription.getDate();
+        try {
+            Date d =Convert.toDate(date);
+        }
+        catch (Exception e){
+            map.put("date","date 's format is wrong!");
+            return new Result(false,map);
+        }
+
         if (j==arrays.length){
             check = true;
         }
