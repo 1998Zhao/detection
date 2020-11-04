@@ -1,7 +1,8 @@
-package com.doxda.detection.authenticity;
+package com.doxda.detection.check.authenticity;
 
 import com.doxda.detection.metadate.IMetadata;
 import com.doxda.detection.metadate.Metadata;
+import com.doxda.detection.metadate.fixity.FixityInformation;
 import com.doxda.detection.result.Result;
 
 import java.lang.reflect.Field;
@@ -11,26 +12,25 @@ import java.lang.reflect.Field;
  * @author zgq
  * createTime 2020-10-27
  */
-public interface AuthenticityHandle {
+public interface IAuthenticity {
     /**
      * 来源真实性检测 检测项目为固化信息有效性检测
-     * @param filename 文件路径
+     * @param fixityInformation  固化信息
      * @return 是否通过
      */
-    Result sourceAuthenticity(String filename);
+    Result sourceAuthenticity(FixityInformation fixityInformation);
 
     /**
      * 元数据真实性检测
-     * @param metadata 元数据
      * @return 是否通过
      */
-    Result metadataAuthenticity(Metadata metadata);
+    Result metadataAuthenticity();
 
     /**
      * 电子文件真实
      * @return 是否通过
      */
-    boolean electronicDocumentAuthenticity();
+    Result electronicDocumentAuthenticity();
 
     /**
      * 元数据与内容关联真实性检测

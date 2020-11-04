@@ -44,4 +44,60 @@ public class ElectronicSignature implements IMetadata{
      * 用于电子签名的算法标识
      */
     private String signatureAlgorithmIdentifier;
+
+    public String getSignatureRules() {
+        return signatureRules;
+    }
+
+    public void setSignatureRules(String signatureRules) {
+        this.signatureRules = signatureRules;
+    }
+
+    public Date getSignatureTime() {
+        return signatureTime;
+    }
+
+    public void setSignatureTime(Date signatureTime) {
+        this.signatureTime = signatureTime;
+    }
+
+    public String getSigner() {
+        return signer;
+    }
+
+    public void setSigner(String signer) {
+        this.signer = signer;
+    }
+
+    public String getSignature() {
+        return signature;
+    }
+
+    public void setSignature(String signature) {
+        this.signature = signature;
+    }
+
+    public String getCertificate() {
+        return certificate;
+    }
+
+    public void setCertificate(String certificate) {
+        this.certificate = certificate;
+    }
+
+    public String getCertificateReference() {
+        return certificateReference;
+    }
+
+    public void setCertificateReference(String certificateReference) {
+        this.certificateReference = certificateReference;
+    }
+
+    public String getSignatureAlgorithmIdentifier() {
+        return signatureAlgorithmIdentifier;
+    }
+
+    public void setSignatureAlgorithmIdentifier(String signatureAlgorithmIdentifier) {
+        this.signatureAlgorithmIdentifier = signatureAlgorithmIdentifier;
+    }
 }

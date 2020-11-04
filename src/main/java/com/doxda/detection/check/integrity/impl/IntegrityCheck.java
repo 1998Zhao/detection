@@ -1,17 +1,18 @@
-package com.doxda.detection.integrity.impl;
+package com.doxda.detection.check.integrity.impl;
 
-import com.doxda.detection.integrity.IntegrityHandle;
+import com.doxda.detection.check.integrity.IIntegrityCheck;
 /**
  * 电子文件数据总量检测 电子文件数据总量检测 电子文件内容完整性检测 归档信息包完整性检测
  * @author zgq
  * createTime 2020-10-27
  */
-public class IntegrityHandler implements IntegrityHandle {
+public class IntegrityCheck implements IIntegrityCheck {
     /**
      * 电子文件数据总量检测
      *
      * @return 是否通过
      */
+    @Override
     public boolean electronicDocumentQuantityDetection() {
         return false;
     }
@@ -21,6 +22,7 @@ public class IntegrityHandler implements IntegrityHandle {
      *
      * @return 是否通过
      */
+    @Override
     public boolean metadataIntegrityDetection() {
         return false;
     }
@@ -30,6 +32,7 @@ public class IntegrityHandler implements IntegrityHandle {
      *
      * @return 是否通过
      */
+    @Override
     public boolean contentIntegrityDetection() {
         return false;
     }
@@ -39,6 +42,7 @@ public class IntegrityHandler implements IntegrityHandle {
      *
      * @return 是否通过
      */
+    @Override
     public boolean archivePacketDetection() {
         return false;
     }
